@@ -1,12 +1,15 @@
-#number=int(input("Enter the number:"))
-number=2345
-result=0
-while True:
-    result=result+number%10
-    number=number//10
-    if result<10 and number==0:
-        break
-    if number==0:
-        number=result
-        result=0
-print(result)
+def is_factor(num):
+    for index in range(2,num):
+        if num%index==0:
+            yield index
+
+
+# def is_prime(num):
+#     if num<=0:
+#         return False
+#     for index in range(2,num):
+#         if num%index==0:
+#             return False
+#     return True)
+
+print(list(is_factor(12)))

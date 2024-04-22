@@ -1,11 +1,7 @@
-#number=int(input("Enter the number: "))
-number=17
-while True:
-    if number==1:
-        break
-    elif number%2==0:
-        number=number//2
-    elif number%2 !=0:
-        number=(number*3)+1
-    print(number)
-print(number)
+def is_prime(num: int):
+    for index in range(2,num):
+        if num%index==0:
+            return False
+    return True
+
+print(is_prime(71))
